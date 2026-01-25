@@ -3,9 +3,7 @@ package com.netflix.clone.netflix_clone_backend.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.netflix.clone.netflix_clone_backend.enums.Role;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -17,6 +15,9 @@ import java.util.Set;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
